@@ -3,6 +3,6 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
-/AdventOfCode2024/Input/
+/AdventOfCode2025/Input/Day*.txt
 .idea/
-AdventOfCode2024.sln.DotSettings.user
+AdventOfCode2025.sln.DotSettings.user
