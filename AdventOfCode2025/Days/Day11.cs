@@ -8,8 +8,10 @@ public class Day11 : Day
 {
     private readonly Dictionary<string, HashSet<string>> _graph;
     private const string Dac = "dac";
+    private const int DacMarker = 1 << 1;
     private const string End = "out";
     private const string Fft = "fft";
+    private const int FftMarker = 1 << 2;
     private const string StartPart1 = "you";
     private const string StartPart2 = "svr";
 
@@ -29,7 +31,7 @@ public class Day11 : Day
 
     public override string Part2()
     {
-        return CountPaths2(StartPart2, End, [], 0, 6).ToString();
+        return CountPaths2(StartPart2, End, [], 0, DacMarker | FftMarker).ToString();
     }
 
     private long CountPaths(string start, string end)
@@ -59,10 +61,10 @@ public class Day11 : Day
         switch (start)
         {
             case Dac:
-                flag |= 1 << 1;
+                flag |= DacMarker;
                 break;
             case Fft:
-                flag |= 1 << 2;
+                flag |= FftMarker;
                 break;
         }
 
