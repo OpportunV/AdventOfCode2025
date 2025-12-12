@@ -46,7 +46,8 @@ public class Solver
                     IsClass: true,
                     IsAbstract: false
                 }
-                && baseClassType.IsAssignableFrom(type));
+                && baseClassType.IsAssignableFrom(type))
+            .OrderBy(type => int.Parse(type.Name.Replace($"{nameof(Day)}", string.Empty)));
         return enumerable;
     }
 
